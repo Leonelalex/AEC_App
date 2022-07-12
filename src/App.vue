@@ -8,13 +8,14 @@ import MainFooter from '@/components/MainFooter.vue'
 
   <MainHeader />
 
-  <v-main>
-    <v-sheet>
+
+
+
       <v-container class="bg" fluid>
         <RouterView />
       </v-container>
-    </v-sheet>
-  </v-main>
+
+
 
   <MainFooter />
 </v-app>
@@ -22,9 +23,7 @@ import MainFooter from '@/components/MainFooter.vue'
 
 <style>
   .bg{
-    background-image: url("/images/Background.png") ; 
-    background-size: cover;
-    background-repeat: no-repeat;
+
     height: 100vh;
   }
 </style>
