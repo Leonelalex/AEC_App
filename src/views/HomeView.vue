@@ -1,6 +1,6 @@
 <script setup>
 import Carousel from '@/components/MainCarousel.vue';
-import Noticias from '@/components/Noticias.vue'
+import Noticias from '@/components/Recientes.vue'
 </script>
 
 <template>

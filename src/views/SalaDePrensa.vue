@@ -1,4 +1,19 @@
-<script setup>
+<script>
+import Noticias from '../components/Noticias.vue';
+import Multimedia from '../components/Multimedia.vue';
+    export default{
+    data() {
+        return {
+            openSubpage: 1,
+        };
+    },
+    methods: {
+        changeSubpage(subpage) {
+            this.openSubpage = subpage;
+        }
+    },
+    components: { Noticias, Multimedia }
+}
 </script>
 
 <template>
@@ -6,22 +21,14 @@
     <v-container>
 
         <v-tabs background-color="rgba(0,0,0,0)">
-            <v-tab>Noticias</v-tab>
-            <v-tab>Multimedia</v-tab>
-            <v-tab>Redes Sociales</v-tab>
+            <v-tab @click="changeSubpage(1)">Noticias</v-tab>
+            <v-tab @click="changeSubpage(2)">Multimedia</v-tab>
         </v-tabs>
 
 
         <v-container class="innerPage">
-            <v-row>
-                <h2>Comunicados</h2>
-            </v-row>
-            <v-row>
-                <h2>Declaraciones</h2>
-            </v-row>
-            <v-row>
-                <h2>Acuerdos</h2>
-            </v-row>
+            <Noticias v-if="openSubpage == 1" />
+            <Multimedia v-if="openSubpage == 2" />
         </v-container>
     </v-container>
 </template>

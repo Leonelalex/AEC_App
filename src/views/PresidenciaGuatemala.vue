@@ -1,47 +1,65 @@
 <script>
 
-import {downloadFile} from '../utils/files.js';
+import { downloadFile } from '../utils/files';
+import {mdiDownload} from '@mdi/js';
 
 export default{
+    data() {
+        return {downloadIcon : mdiDownload}
+    },
     methods: {
-        async downloadDocs(url, file){
-            downloadFile(url, file);
+        async downloadDocs(){
+            console.log("descargando");
+            downloadFile('/documents/pdf-test.pdf', 'test');
         }
     },
 };
 </script>
 
 <template>
+        <v-container>
 
-    <v-container>
-
-        <v-tabs background-color="rgba(0,0,0,0)">
-            <v-tab>Plan de Trabajo Guatemala 2022-2023</v-tab>
-            <v-tab>Plan de Acción AEC 2022-2028</v-tab>
-            <v-tab>Logros</v-tab>
-        </v-tabs>
-
-
-        <v-container class="innerPage">
-            <v-row>
+            <v-row class="mb-6">
                 <h2>Plan de Trabajo Guatemala 2022-2023</h2>
-                <v-list-item>
-                <v-list-item-icon>
-                    <v-icon role="img" aria-hidden="false"></v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                    <v-list-item-title></v-list-item-title>
-                </v-list-item-content>
+                <v-list-item @click="downloadDocs">
+                    <v-list-item-icon>
+                        <v-icon>{{downloadIcon}}</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-content>
+                        <h3>Plan de Trabajo</h3>
+                    </v-list-item-content>
                 </v-list-item>
             </v-row>
-            <v-row>
+            
+            
+            <v-row class="mb-6">
                 <h2>Plan de Acción AEC 2022-2028</h2>
+                <v-list-item @click="downloadDocs">
+                    <v-list-item-icon>
+                        <v-icon>{{downloadIcon}}</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-content>
+                        <h3>Plan de Accion</h3>
+                    </v-list-item-content>
+                </v-list-item>
             </v-row>
-            <v-row>
+
+            <v-row class="mb-6">
                 <h2>Logros</h2>
+                <v-list-item @click="downloadDocs">
+                    <v-list-item-icon>
+                        <v-icon>{{downloadIcon}}</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-content>
+                        <h3>Logros</h3>
+                    </v-list-item-content>
+                </v-list-item>
             </v-row>
+
         </v-container>
-    </v-container>
 </template>
 
 <style>

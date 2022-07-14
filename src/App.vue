@@ -8,14 +8,9 @@ import MainFooter from '@/components/MainFooter.vue'
 
   <MainHeader />
 
-
-
-
       <v-container class="bg" fluid>
         <RouterView />
       </v-container>
-
-
 
   <MainFooter />
 </v-app>
@@ -24,6 +19,6 @@ import MainFooter from '@/components/MainFooter.vue'
 <style>
   .bg{
 
-    height: 100vh;
+    height: 90%;
   }
 </style>

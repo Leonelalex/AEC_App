@@ -1,26 +1,25 @@
 <template>
-    <v-row>
-        <v-col>
-            <h3>Cápsulas (Recientes)</h3>
-            <v-img></v-img>
-            <a href="">Link</a>
-        </v-col>
+    <v-container>
 
-        <v-col>
-            <h3>Comunicados (Recientes)</h3>
-            <v-img></v-img>
-            <a href="">Link</a>
-        </v-col>
+        <v-card max-width="600" outlined v-for="n in 6">
+            <v-list-item>
+            <v-list-item-avatar
+                tile
+                size="80"
+                color="grey"
+            ></v-list-item-avatar>
 
-        <v-col>
-            <h3>Próximos Eventos</h3>
-            <p>15 de julio - I Reunión del Grupo de Trabajo pata Examinar las Conclusiones de la Empresa Auditora</p>
-            <p>25 al 27 de julio - Reunión del Comité de Redacción  para la IX Cumbre de Jefes de Estado y/o Gobierno de la AEC.</p>
-            <p>28 de julio - II Reunión del Grupo de Trabajo pata Examinar las Conclusiones de la Empresa Auditora.</p>
-            <p>29 de julio - VII Reunión de Mecanismo de Coordinación.</p>
-        </v-col>
-    </v-row>
+            <v-list-item-content>
+                <v-list-item-subtitle>1{{n}} Julio 2022</v-list-item-subtitle>
+                <v-list-item-title >Noticia de prueba {{n}} Lore ipsum no magnu se tira</v-list-item-title>
+                
+            </v-list-item-content>
+            </v-list-item>
+        </v-card>
+
+    </v-container>
 </template>
 
 <script>
+
 </script>

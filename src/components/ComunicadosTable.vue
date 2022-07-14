@@ -1,7 +1,6 @@
 <template>
       <v-card>
         <v-card-title>
-
             <v-text-field
                 v-model="search"
                 append-icon="mdi-magnify"
@@ -12,7 +11,7 @@
         </v-card-title>
         <v-data-table
         :headers="headers"
-        :items="actividades"
+        :items="comunicados"
         :search="search"
         ></v-data-table>
   </v-card>
@@ -31,25 +30,25 @@
           },
           { text: 'Fecha', value: 'fecha' },
         ],
-        actividades: [
+        comunicados: [
           {
-            titulo: 'Actividad 1',
+            titulo: 'Comunicado 1',
             fecha: '7/13/2022',
           },
           {
-            titulo: 'Actividad 2',
+            titulo: 'Comunicado 2',
             fecha: '7/13/2022',
           },
           {
-            titulo: 'Actividad 3',
+            titulo: 'Comunicado 3',
             fecha: '7/13/2022',
           },
           {
-            titulo: 'Actividad 4',
+            titulo: 'Comunicado 4',
             fecha: '7/13/2022',
           },
           {
-            titulo: 'Actividad 5',
+            titulo: 'Comunicado 5',
             fecha: '7/13/2022',
           },
         ],

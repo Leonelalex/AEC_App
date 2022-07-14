@@ -3,6 +3,8 @@ import Vuetify from "vuetify/lib/framework";
 import es from "vuetify/lib/locale/es";
 import colors from "vuetify/lib/util/colors";
 
+import '@mdi/font/css/materialdesignicons.css'
+
 Vue.use(Vuetify);
 
 export default new Vuetify({
@@ -23,6 +25,9 @@ export default new Vuetify({
         titleColor: "#000000",
         headerColor: "#191A19",
       },
+    },
+    icons:{
+      iconfont: 'mdiSvg',
     },
   },
   lang: {
