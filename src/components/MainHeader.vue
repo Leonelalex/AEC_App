@@ -4,7 +4,10 @@
     }
 
     .logoContainer{
-        padding: 15px;
+        background-image: url("/images/HeaderBackground.svg");
+        background-size: cover;
+        width: 100%;
+        height: 175px;
     }
 </style>
 
@@ -12,24 +15,22 @@
     <v-container fluid class="bgHeader">
         <div class="logoContainer">
             <v-row justify="center" align="center">
-                <v-col cols="12" sm="2"><v-img src="/images/AECimage.png" height="150" width="300"></v-img></v-col>
-                <v-col cols="12" sm="2"><v-img src="/images/ACSimage.png" height="150" width="300"></v-img></v-col>
-                <v-col cols="12" sm="6"><h1>PRESIDENCIA DEL CONSEJO DE MINISTROS DE LA AEC</h1></v-col>
-                <v-col cols="12" sm="2"><v-img src="/images/LogoMinex.png" width="300"></v-img></v-col>
+
             </v-row>
         </div>
 
-        <v-app-bar color="#B7D0E1">
+        <v-toolbar color="#91AEC4">
             
                 <v-tabs align-with-title>
-                <v-tab href="http://www.acs-aec.org/index.php?q=es">AEC</v-tab>
-                <v-tab to="/presidencia">Presidencia Guatemala</v-tab>
-                <v-tab to="/documentos">Documentos</v-tab>
-                <v-tab to="/saladeprensa">Sala de Prensa</v-tab>
-                <v-tab to="/agenda">Agenda y Actividades</v-tab>
-                <v-tab  to="/ixcumbre">IX Cumbre Jefes de Estado</v-tab>
+                    <v-tab to="/"><h4>Inicio</h4></v-tab>
+                    <v-tab href="http://www.acs-aec.org/index.php?q=es"><h4>AEC</h4></v-tab>
+                    <v-tab to="/presidencia"><h4>Presidencia Guatemala</h4></v-tab>
+                    <v-tab to="/documentos"><h4>Documentos</h4></v-tab>
+                    <v-tab to="/saladeprensa"><h4>Sala de Prensa</h4></v-tab>
+                    <v-tab to="/agenda"><h4>Agenda y Actividades</h4></v-tab>
+                    <v-tab  to="/ixcumbre"><h4>IX Cumbre Jefes de Estado</h4></v-tab>
                 </v-tabs>
 
-        </v-app-bar>
+        </v-toolbar>
     </v-container>
 </template>

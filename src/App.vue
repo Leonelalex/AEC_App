@@ -1,4 +1,4 @@
-<script setup>
+<script>
 import MainHeader from '@/components/MainHeader.vue'
 import MainFooter from '@/components/MainFooter.vue'
 </script>
@@ -18,7 +18,8 @@ import MainFooter from '@/components/MainFooter.vue'
 
 <style>
   .bg{
-
+    background-image: url("/images/MainBackground.svg");
+    background-size: cover;
     height: 90%;
   }
 </style>

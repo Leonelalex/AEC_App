@@ -1,9 +1,11 @@
 <template>
     <v-row>
         <v-col>
+
             <h3>Cápsulas (Recientes)</h3>
             <v-img></v-img>
             <a href="">Link</a>
+
         </v-col>
 
         <v-col>
