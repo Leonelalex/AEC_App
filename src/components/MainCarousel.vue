@@ -17,6 +17,18 @@
         items: [
           {
             src: '/images/carrousel/carrousel1.svg',
+          },
+          {
+            src: '/images/carrousel/carrousel2.svg',
+          },
+          {
+            src: '/images/carrousel/carrousel3.svg',
+          },
+          {
+            src: '/images/carrousel/carrousel4.svg',
+          },
+          {
+            src: '/images/carrousel/carrousel5.svg',
           }
         ],
       }
