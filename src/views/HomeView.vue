@@ -13,6 +13,6 @@ import Noticias from '@/components/Recientes.vue'
     </v-container>
 </template>
 
-<style scoped>
+<style>
 
 </style>

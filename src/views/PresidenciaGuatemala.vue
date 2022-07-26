@@ -85,21 +85,21 @@ export default{
                 </v-row>
 
                 <v-row>
-                    <v-col @click="downloadDocs('LOGROS_PPT_GUATEMALA')" cols="4" align-self>
+                    <v-col @click="downloadDocs('LOGROS_PPT_GUATEMALA')" cols="4">
                         <v-card min-height="100px" hover>
                             <v-card-title>Logros PPT Guatemala</v-card-title>
                             <v-card-subtitle>Español</v-card-subtitle>
                             <v-card-actions><v-icon>{{downloadIcon}}</v-icon></v-card-actions>
                         </v-card> 
                     </v-col>
-                    <v-col @click="downloadDocs('ACHIEVEMENTS_PPT_OF_GUATEMALA')" cols="4" align-self>
+                    <v-col @click="downloadDocs('ACHIEVEMENTS_PPT_OF_GUATEMALA')" cols="4">
                         <v-card min-height="100px" hover>
                             <v-card-title>Achivements PPT Of Guatemala</v-card-title>
                             <v-card-subtitle>English</v-card-subtitle>
                             <v-card-actions><v-icon>{{downloadIcon}}</v-icon></v-card-actions>
                         </v-card> 
                     </v-col>
-                    <v-col @click="downloadDocs('RESULTATS_ESCOMPTES_PRESIDENCE_GUATEMALA_AEC')" cols="4" align-self>
+                    <v-col @click="downloadDocs('RESULTATS_ESCOMPTES_PRESIDENCE_GUATEMALA_AEC')" cols="4">
                         <v-card min-height="100px" hover>
                             <v-card-title>Résultats Escomptés Presidence Guatemala</v-card-title>
                             <v-card-subtitle>Français</v-card-subtitle>
