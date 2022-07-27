@@ -6,6 +6,7 @@ import Documentos from '../views/Documentos.vue'
 import SalaDePrensa from '../views/SalaDePrensa.vue'
 import Agenda from '../views/AgendaYActividades.vue'
 import IXCumbre from '../views/IXCumbre.vue'
+import AECpage from '../views/AECPage.vue'
 
 
 Vue.use(VueRouter)
@@ -43,6 +44,11 @@ const router = new VueRouter({
       path: '/ixcumbre',
       name: 'IX Cumbre Jefes de Estado',
       component: IXCumbre
+    },
+    {
+      path: '/aec',
+      name: 'AEC',
+      component: AECpage
     }
   ]
 })

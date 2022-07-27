@@ -54,7 +54,7 @@ export default{
                     <h2>Plan de Acción AEC 2022-2028</h2>
                 </v-row>
 
-                <v-row>
+                <!--<v-row>
                     <v-col @click="downloadDocs('CALENDARIO_DE_ACTIVIDADES_PRESIDENCIA_AEC')" cols="4"> 
                         <v-card min-height="100px" hover>
                             <v-card-title>Calendario De Actividades Presidencia AEC</v-card-title>
@@ -76,7 +76,7 @@ export default{
                             <v-card-actions><v-icon>{{downloadIcon}}</v-icon></v-card-actions>
                         </v-card>
                     </v-col>
-                </v-row>
+                </v-row>-->
             </v-container>
 
             <v-container class="mb-8">

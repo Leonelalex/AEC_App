@@ -1,59 +1,47 @@
 <template>
-      <v-card>
-        <v-card-title>
-
-            <v-text-field
-                v-model="search"
-                append-icon="mdi-magnify"
-                label="Search"
-                single-line
-                hide-details
-            ></v-text-field>
-        </v-card-title>
-        <v-data-table
-        :headers="headers"
-        :items="actividades"
-        :search="search"
-        ></v-data-table>
-  </v-card>
+  <v-container>
+    <h1>CALENDARIO DE ACTIVIDADES PRESIDENCIA AEC</h1>
+                <v-row>
+                  
+                    <v-col @click="downloadDocs('CALENDARIO_DE_ACTIVIDADES_PRESIDENCIA_AEC')" cols="4"> 
+                        <v-card min-height="100px" hover>
+                            <v-card-title>Calendario De Actividades Presidencia AEC</v-card-title>
+                            <v-card-subtitle>Español</v-card-subtitle>
+                            <v-card-actions><v-icon>{{downloadIcon}}</v-icon></v-card-actions>
+                        </v-card>
+                    </v-col>
+                    <v-col @click="downloadDocs('CALENDAR_OF_ACTIVITIES_PRESIDENCY_OF_GUATEMALA_ASC')" cols="4"> 
+                        <v-card min-height="100px" hover>
+                            <v-card-title>Calendar Of Activities Presidency Of Guatemala ASC</v-card-title>
+                            <v-card-subtitle>English</v-card-subtitle>
+                            <v-card-actions><v-icon>{{downloadIcon}}</v-icon></v-card-actions>
+                        </v-card>
+                    </v-col>
+                    <v-col @click="downloadDocs('CALENDRIER_DES_ACTIVITIES_PRESIDENCE_GUATEMALA_AEC')" cols="4"> 
+                        <v-card min-height="100px" hover>
+                            <v-card-title>Calendrier Des Activities Presidence Guatemala AEC</v-card-title>
+                            <v-card-subtitle>Français</v-card-subtitle>
+                            <v-card-actions><v-icon>{{downloadIcon}}</v-icon></v-card-actions>
+                        </v-card>
+                    </v-col>
+                </v-row>
+  </v-container>
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        search: '',
-        headers: [
-          {
-            text: 'Titulo',
-            align: 'start',
-            value: 'titulo',
-          },
-          { text: 'Fecha', value: 'fecha' },
-        ],
-        actividades: [
-          {
-            titulo: 'Actividad 1',
-            fecha: '7/13/2022',
-          },
-          {
-            titulo: 'Actividad 2',
-            fecha: '7/13/2022',
-          },
-          {
-            titulo: 'Actividad 3',
-            fecha: '7/13/2022',
-          },
-          {
-            titulo: 'Actividad 4',
-            fecha: '7/13/2022',
-          },
-          {
-            titulo: 'Actividad 5',
-            fecha: '7/13/2022',
-          },
-        ],
-      }
+
+import { downloadFile } from '../utils/files';
+import {mdiDownload} from '@mdi/js';
+
+export default{
+    data() {
+        return {downloadIcon : mdiDownload}
     },
-  }
+    methods: {
+        async downloadDocs(fileName){
+            const url = '/documents/' + fileName + '.pdf';
+            downloadFile(url, fileName);
+        }
+    },
+};
 </script>

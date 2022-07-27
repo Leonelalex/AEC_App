@@ -26,9 +26,6 @@
           },
           {
             src: '/images/carrousel/carrousel4.svg',
-          },
-          {
-            src: '/images/carrousel/carrousel5.svg',
           }
         ],
       }

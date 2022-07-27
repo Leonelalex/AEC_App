@@ -8,11 +8,15 @@ import Noticias from '@/components/Recientes.vue'
 
       <Carousel />
 
-      <Noticias />
+      <div class="noticiasPanel">
+        <Noticias />
+      </div>
 
     </v-container>
 </template>
 
 <style>
-
+  .noticiasPanel{
+    padding-top: 20px;
+  }
 </style>
