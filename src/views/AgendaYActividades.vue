@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h1>CALENDARIO DE ACTIVIDADES PRESIDENCIA AEC</h1>
+    <h2>{{title}}</h2>
                 <v-row>
                   
                     <v-col @click="downloadDocs('CALENDARIO_DE_ACTIVIDADES_PRESIDENCIA_AEC')" cols="4"> 
@@ -28,6 +28,13 @@
   </v-container>
 </template>
 
+<style scoped>
+    h2{
+        padding-bottom: 10px;
+        color: #4E97D1;
+    }
+</style>
+
 <script>
 
 import { downloadFile } from '../utils/files';
@@ -35,13 +42,35 @@ import {mdiDownload} from '@mdi/js';
 
 export default{
     data() {
-        return {downloadIcon : mdiDownload}
+        return {
+            downloadIcon : mdiDownload,
+            title: 'Calendario De Actividades Presidencia AEC'
+        }
+    },
+    created() {
+        this.changeLan(localStorage.getItem('Lan'));
     },
     methods: {
         async downloadDocs(fileName){
             const url = '/documents/' + fileName + '.pdf';
             downloadFile(url, fileName);
+        },
+        changeLan(lan){
+            if(lan == 'ESP'){
+                this.title = 'Calendario De Actividades Presidencia AEC';
+            }
+            if(lan == 'ENG'){
+                this.title = 'Calendar Of Activities Presidency Of Guatemala ASC';
+            }
+            if(lan == 'FRN'){
+                this.title = 'Calendrier Des Activities Presidence Guatemala AEC';
+            }
         }
+    },
+    mounted() {
+        this.$root.$on('changeLan', (lan) =>{
+            this.changeLan(lan);
+        })
     },
 };
 </script>

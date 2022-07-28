@@ -10,6 +10,7 @@ import Components from 'unplugin-vue-components/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  Lan : 'ESP',
   plugins: [
     vue2(),
     vue2Jsx(),

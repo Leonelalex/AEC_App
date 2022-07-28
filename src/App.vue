@@ -1,6 +1,12 @@
 <script>
 import MainHeader from '@/components/MainHeader.vue'
 import MainFooter from '@/components/MainFooter.vue'
+
+export default{
+  created(){
+    localStorage.setItem('Lan', 'ESP');
+  }
+}
 </script>
 
 <template>
