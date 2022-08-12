@@ -1,11 +1,11 @@
 <template>
     <v-row>
+        
         <v-col>
-
-            <h3>Cápsulas (Recientes)</h3>
-            <v-img></v-img>
-            <a href="">Link</a>
-
+            <v-card class="pa-3">
+                <v-card-title class="text-h4">Capsulas Recientes</v-card-title>
+                <Capsulas />
+            </v-card>
         </v-col>
 
         <v-col>
@@ -21,21 +21,23 @@
         </v-col>
 
         <v-col>
-            <v-card>
-                <h3>{{title}}</h3>
-                <p>{{p1}}</p>
-                <p>{{p2}}</p>
-                <p>{{p3}}</p>
-                <p>{{p4}}</p>
-                <p>{{p5}}</p>
-                <p>{{p6}}</p>
-                <p>{{p7}}</p>
+            <v-card class="pa-3">
+                <v-card-title class="text-h4">{{title}}</v-card-title>
+                <h4 class="pa-2">{{p1}}</h4>
+                <h4 class="pa-2">{{p2}}</h4>
+                <h4 class="pa-2">{{p3}}</h4>
+                <h4 class="pa-2">{{p4}}</h4>
+                <h4 class="pa-2">{{p5}}</h4>
+                <h4 class="pa-2">{{p6}}</h4>
+                <h4 class="pa-2">{{p7}}</h4>
             </v-card>
         </v-col>
     </v-row>
 </template>
 
 <script>
+import Capsulas from '../components/Capsulas.vue';
+
     export default{
         data() {
             return {
@@ -91,6 +93,7 @@
                 this.changeLan(lan);
             })
         },
+        components: {Capsulas}
     }
 </script>
 
